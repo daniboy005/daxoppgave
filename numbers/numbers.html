@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- Coding by CodingLab | www.codinglabweb.com-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="numbers.css">
+   </head>
+<body>
+  <div class="wrapper">
+    <span class="minus">-</span>
+    <span class="num">0</span>
+    <span class="plus">+</span>
+  </div>
+  <script>
+   const plus = document.querySelector(".plus"),
+    minus = document.querySelector(".minus"),
+    num = document.querySelector(".num");
+    let a = 0;
+    plus.addEventListener("click", ()=>{
+      a++;
+      a = (a < 10) ? + a : a;
+      num.innerText = a;
+    });
+
+    minus.addEventListener("click", ()=>{
+      if(a > 0){
+        a--;
+        a = (a < 10) ? + a : a;
+        num.innerText = a;
+      }
+    });
+
+  </script>
+</body>
+</html>
